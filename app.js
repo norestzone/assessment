@@ -22,14 +22,14 @@
 
 
 let display = 0;
-let inputNum = document.getElementById('inputNum')
+let inputNum = document.getElementById('inputNum');
 
 document.getElementById('output').innerHTML = display;
 
 function addBtn() {
-  document.getElementById('output').innerHTML = ++display;
+  document.getElementById('output').innerHTML = (++display + inputNum.value);
 }
 
 function decBtn() {
-  document.getElementById('output').innerHTML = --display;
+  document.getElementById('output').innerHTML = (display-- - inputNum.value);
 }
