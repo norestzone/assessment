@@ -26,6 +26,11 @@ body {
     border-radius: 12px;
 }
 
+.clickable:hover {
+    color: rgb(241, 232, 232);
+    background-color: black;
+}
+
 #inputNum {
     margin-top: 10px;
     width: 50px;
