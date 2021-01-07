@@ -41,7 +41,7 @@ decButton.addEventListener('click', decBtn);
 function addBtn() {
   total = total + parseInt(userInput.value);
   updateDisplay();
-  
+
   // console.log('userInput' + userInput.value);
   // console.log(total);
   // outputNum.innerText = display + parseInt(inputNum.value);
@@ -50,14 +50,19 @@ function addBtn() {
 function decBtn() {
   total = total - parseInt(userInput.value);
   updateDisplay();
-  
+
   // console.log('userInput' + userInput.value);
   // console.log(total);
   // outputNum.innerText = display - parseInt(inputNum.value);
 }
 
 function updateDisplay(){
-    outputNum.innerText = total
+    outputNum.innerText = total;
+    if (total < 0) {
+      outputNum.style.color = 'red'
+    } else { 
+      outputNum.style.color = 'black'
+    }
   }
 
 
