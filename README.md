@@ -4,7 +4,7 @@
 
 ## Completed Assessment
 
-https://github.com/norestzone/assessment.git
+https://norestzone.github.io/assessment/
 
 ### Introduction (By Instructor)
 
