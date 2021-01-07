@@ -19,17 +19,72 @@
 //         newNum = ("output" + 1)
 //     output.innerText = newNum
 // }
+// ********
+
+// let display = 0;
+let userInput = document.getElementById('inputNum');
+let outputNum = document.getElementById('output');
+let addButton = document.getElementById('addBtn');
+let decButton = document.getElementById('decBtn');
+
+let total = 0;
+
+// outputNum.innerText = display;
+
+addButton.addEventListener('click', function () {
+  addBtn()
+});
 
 
-let display = 0;
-let inputNum = document.getElementById('inputNum');
-
-document.getElementById('output').innerHTML = display;
+decButton.addEventListener('click', decBtn);
 
 function addBtn() {
-  document.getElementById('output').innerHTML = (++display + inputNum.value);
+  total = total + parseInt(userInput.value);
+  updateDisplay();
+  
+  // console.log('userInput' + userInput.value);
+  // console.log(total);
+  // outputNum.innerText = display + parseInt(inputNum.value);
 }
 
 function decBtn() {
-  document.getElementById('output').innerHTML = (display-- - inputNum.value);
+  total = total - parseInt(userInput.value);
+  updateDisplay();
+  
+  // console.log('userInput' + userInput.value);
+  // console.log(total);
+  // outputNum.innerText = display - parseInt(inputNum.value);
 }
+
+function updateDisplay(){
+    outputNum.innerText = total
+  }
+
+
+// ********
+
+// const display = document.getElementById('display');
+
+// const decBtn = document.getElementById('deduct');
+// const inputValue = document.getElementById('inputNum');
+
+
+// decBtn.addEventListener('click', addToCount)
+
+// let total = 1
+
+// function addToCount() {
+//   let fromString = parseInt(inputValue.value)
+//   total = total + fromString
+
+//   updateDisplay()
+// }
+
+// function subFromCount() {
+//   updateDisplay()
+// }
+
+// function updateDisplay(){
+//   display.innerText = total
+
+// }
